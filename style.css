@@ -692,55 +692,43 @@ nav {
 }
 
 .pic-social-2 {
-  border: red 4px solid;
   margin: 1.5vh;
   height: 8.5vh;
   width: 8.5vh;
-  border-radius: 50%;
+  border-radius: 20px;
   background-image: url(Images/Instagram.png);
   background-size: cover;
   cursor: pointer;
-  animation: ani_one 2s alternate infinite;
-  transition: all 0.5s ease-in-out;
 }
 
 .pic-social-3 {
-  border: red 4px solid;
   margin: 1.5vh;
   height: 8.5vh;
   width: 8.5vh;
-  border-radius: 50%;
-  background-image: url(Images/linkedin.png);
+  border-radius: 20px;
+  background-image: url(Images/linkedIn.png);
   background-size: cover;
   cursor: pointer;
-  animation: ani_one 2s alternate-reverse infinite;
-  transition: all 0.5s ease-in-out;
 }
 
 .pic-social-4 {
-  border: red 4px solid;
   margin: 1.5vh;
   height: 8.5vh;
   width: 8.5vh;
-  border-radius: 50%;
+  border-radius: 20px;
   background-image: url(Images/github.jpg);
   background-size: cover;
   cursor: pointer;
-  animation: ani_one 2s alternate infinite;
-  transition: all 0.5s ease-in-out;
 }
 
 .pic-social-5 {
-  border: red 4px solid;
   margin: 1.5vh;
   height: 8.5vh;
   width: 8.5vh;
-  border-radius: 50%;
+  border-radius: 20px;
   background-image: url(Images/leetcode.png);
   background-size: cover;
   cursor: pointer;
-  animation: ani_one 2s linear infinite;
-  transition: all 0.5s ease-in-out;
 }
 
 .pic-social-1:hover,
