@@ -1,12 +1,12 @@
 const toggleButton = document.getElementById("theme-toggle");
 const body = document.body;
-
+const toggleIcon = document.getElementById("toggle-icon");
 toggleButton.addEventListener("click", () => {
   if (body.classList.contains("light-mode")) {
     body.classList.remove("light-mode");
-    toggleButton.innerText = "Light";
+    toggleIcon.src = "Images/day.png";
   } else {
     body.classList.toggle("light-mode");
-    toggleButton.innerText = "Dark";
+    toggleIcon.src = "Images/night.png";
   }
 });

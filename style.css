@@ -24,7 +24,7 @@ body {
   height: auto;
   width: auto;
   background: var(--background-color);
-  font-family: Etna;
+  font-family: "Consolas";
   transition: 1s;
   min-width: 500px;
   color: var(--text-color);
@@ -79,11 +79,11 @@ li {
   top: 0;
   z-index: 999;
   width: 100%;
-
   padding: 0dvh 2dvh 0dvh;
   background-color: var(--primary-color);
   position: fixed;
   border-radius: 0 0 1.2rem 1.2rem;
+  font-family: Etna;
 }
 
 nav {
@@ -130,9 +130,57 @@ nav {
   text-align: center;
   width: auto;
   padding: 20px;
-  font-size: 4dvh;
+  font-size: 5dvh;
 }
 
+#theme-toggle {
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+#toggle-icon {
+  padding: 2px;
+  width: 4dvh;
+  transition: 0.1s;
+}
+#toggle-icon:hover {
+  animation: vibrate 0.5s infinite;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  10% {
+    transform: translate(-2px, -2px);
+  }
+  20% {
+    transform: translate(2px, 2px);
+  }
+  30% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  50% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  70% {
+    transform: translate(-2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  90% {
+    transform: translate(-2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
 /* -------------------Navigation END---------------------------------- */
 #content {
   margin-top: 15dvh;
@@ -243,7 +291,7 @@ nav {
 
 #hire,
 #cv {
-  font-family: Etna;
+  font-family: "consolas";
   color: var(--text-color);
   background-color: var(--primary-color);
   padding: 3vh;
@@ -286,9 +334,10 @@ nav {
 }
 
 .about h1 {
+  margin-bottom: 8vh;
   color: var(--text-color);
   text-align: center;
-  text-shadow: var(--primary-color) 2px 8px 100px;
+  text-shadow: var(--primary-color) 2px 8px 10px;
   color: var(--text-color);
   font-size: 5dvh;
 }
@@ -306,12 +355,13 @@ nav {
   width: 90%;
   padding: 1dvh;
   justify-content: space-around;
+  margin: 8vh 0vh 8vh;
 }
 
 .skills h1 {
   color: var(--text-color);
   text-align: center;
-  text-shadow: var(--primary-color) 2px 8px 100px;
+  text-shadow: var(--primary-color) 2px 8px 10px;
   color: var(--text-color);
   font-size: 5dvh;
 }
@@ -341,22 +391,17 @@ nav {
 /* -------skill segment end------- */
 
 .projects-main {
-  /* border: #cf23cf 2px solid; */
   height: auto;
   width: 100%;
-  /* padding: 9.5vh 0vh 9.5vh; */
-  color: #fff;
+  margin: 8vh 0vh 8vh;
 }
 
 .projects-main h1 {
-  margin: 7vh 0vh 6vh;
-  letter-spacing: 0.2vh;
-  font-size: 2.8em;
+  font-size: 5dvh;
   text-align: center;
-  background: linear-gradient(#f32170, #ff6b08, #ff00ff, #eedd44);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  text-decoration: underline rgb(203, 205, 200);
+  color: var(--text-color);
+  text-shadow: var(--primary-color) 2px 8px 10px;
+  margin-bottom: 8vh;
 }
 
 .projects {
@@ -373,199 +418,180 @@ nav {
 .project-4,
 .project-5,
 .project-6 {
-  border: #02ff2c 2px solid;
-  margin: 4vh 0vh 4vh;
-  padding: 4vh;
+  /* border: #02ff2c 2px solid; */
+  /* margin: 4vh 0vh 4vh; */
+  /* padding: 4vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 1.4em;
-  height: auto;
+  font-size: 1.5em;
+  height: fit-content;
   min-height: 70vh;
   max-width: 50vh;
   width: auto;
-  border-radius: 6vh;
-  animation: ani_two alternate 2s infinite;
 }
 
-.to-do {
-  border: 4px solid yellow;
-  background-image: url(Images/TO_DO\ LIST\ APP.png);
+.rescue-bharat {
+  background-image: url(Images/rescue_bharat.png);
   background-size: cover;
   background-position: center;
   min-height: 20vh;
   min-width: 30.8vh;
   height: auto;
   width: auto;
-  border-radius: 4vh;
-}
-
-.project-1 p,
-.project-2 p,
-.project-3 p,
-.project-4 p,
-.project-5 p,
-.project-6 p {
-  font-family: cursive;
 }
 
 .project-1 h5 {
-  color: rgb(1, 255, 1);
-  margin: 2vh;
-  text-decoration: underline;
+  font-size: 2.5dvh;
+  color: var(--text-color);
+  margin: 3vh;
 }
 
 .project-1 button {
   margin: 3vh 0vh 3vh;
-  padding: 1vh;
-  font-size: 0.8em;
-  font-weight: 900;
-  border-radius: 3vh;
-  background-color: #02ff2c;
-  transition: all 0.5s ease-in-out;
-  font-family: cursive;
+  border-radius: 8vh;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  padding: 3vh;
+  font-size: 1.8dvh;
+  transition: 0.5s;
 }
 
 .project-1 button:hover {
-  cursor: pointer;
-  box-shadow: 0vh 0.5vh 0.5vh 0vh blue;
+  transition: 0.5s;
+  box-shadow: var(--primary-color) 1px 1px 64px;
+  animation: pulse 1s infinite;
 }
 
-.calculator {
-  border: 4px solid pink;
-  background-image: url(Images/CALCULATOR.png);
-  background-size: cover;
-  background-position: center;
-  min-height: 20vh;
-  min-width: 30.4vh;
-  height: auto;
-  width: auto;
-  border-radius: 4vh;
-}
-
-.project-2 h5 {
-  color: rgb(255, 0, 255);
-  margin: 2vh;
-  text-decoration: underline;
-}
-
-.project-2 button {
-  margin: 3vh 0vh 2vh;
-  padding: 1vh;
-  font-size: 0.8em;
-  border-radius: 3vh;
-  background-color: #02ff2c;
-  transition: all 0.5s ease-in-out;
-  font-weight: 900;
-  font-family: cursive;
-}
-
-.project-2 button:hover {
-  cursor: pointer;
-  box-shadow: 0vh 0.5vh 0.5vh 0vh blue;
-}
-
-.temp-con {
-  border: 4px solid violet;
-  background-image: url(Images/TEMP-CON.png);
+.pinball {
+  background-image: url(Images/pinball.png);
   background-size: cover;
   background-position: center;
   min-height: 20vh;
   min-width: 30.8vh;
   height: auto;
   width: auto;
-  border-radius: 4vh;
+}
+
+.project-2 h5 {
+  font-size: 2.5dvh;
+  color: var(--text-color);
+  margin: 3vh;
+}
+
+.project-2 button {
+  margin: 3vh 0vh 3vh;
+  border-radius: 8vh;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 3vh;
+  font-size: 1.8dvh;
+  transition: all 0.5s ease-in-out;
+}
+
+.project-2 button:hover {
+  transition: 0.5s;
+  box-shadow: var(--primary-color) 1px 1px 64px;
+  animation: pulse 1s infinite;
+}
+
+.urlshortner {
+  background-image: url(Images/url-shortner.png);
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  min-height: 20vh;
+  min-width: 30.8vh;
+  height: auto;
+  width: auto;
 }
 
 .project-3 h5 {
-  color: rgb(255, 0, 0);
-  margin: 2vh;
-  text-decoration: underline;
+  font-size: 2.5dvh;
+  color: var(--text-color);
+  margin: 3vh;
 }
 
 .project-3 button {
   margin: 3vh 0vh 3vh;
-  padding: 1vh;
-  font-size: 0.8em;
-  border-radius: 3vh;
-  background-color: #02ff2c;
+  border-radius: 8vh;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 3vh;
+  font-size: 1.8dvh;
   transition: all 0.5s ease-in-out;
-  font-weight: 900;
-  font-family: cursive;
 }
 
 .project-3 button:hover {
-  cursor: pointer;
-  box-shadow: 0vh 0.5vh 0.5vh 0vh blue;
+  transition: 0.5s;
+  box-shadow: var(--primary-color) 1px 1px 64px;
+  animation: pulse 1s infinite;
 }
 
-.dev-labs {
-  border: 4px solid #fff;
-  background-image: url(Images/Dev-labs.png);
+.BlueBalls {
+  border-radius: 20px;
+  background-image: url(Images/blueballs.png);
   background-size: cover;
   min-height: 20vh;
   min-width: 30.8vh;
   height: auto;
   width: auto;
-  border-radius: 2vh;
 }
 
 .project-4 h5 {
-  color: rgb(0, 26, 255);
-  margin: 2vh;
-  text-decoration: underline;
+  font-size: 2.5dvh;
+  color: var(--text-color);
+  margin: 3vh;
 }
 
 .project-4 button {
   margin: 3vh 0vh 3vh;
-  padding: 1vh;
-  font-size: 0.8em;
-  border-radius: 3vh;
-  background-color: #02ff2c;
+  border-radius: 8vh;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 3vh;
+  font-size: 1.8dvh;
   transition: all 0.5s ease-in-out;
-  font-weight: 900;
-  font-family: cursive;
 }
 
 .project-4 button:hover {
-  cursor: pointer;
-  box-shadow: 0vh 0.5vh 0.5vh 0vh blue;
+  transition: 0.5s;
+  box-shadow: var(--primary-color) 1px 1px 64px;
+  animation: pulse 1s infinite;
 }
 
-.portfolio {
-  border: 4px solid rgb(255, 255, 255);
-  background-image: url(Images/PORTFOLIO.png);
+.todolist {
+  background-image: url(Images/todoList.png);
+  border-radius: 20px;
   background-size: cover;
-  background-position: center;
   min-height: 20vh;
   min-width: 30.8vh;
   height: auto;
   width: auto;
-  border-radius: 2vh;
 }
 
 .project-5 h5 {
-  color: rgb(0, 221, 255);
-  margin: 2vh;
-  text-decoration: underline;
+  font-size: 2.5dvh;
+  color: var(--text-color);
+  margin: 3vh;
 }
 
 .project-5 button {
   margin: 3vh 0vh 3vh;
-  padding: 1vh;
-  font-size: 0.8em;
-  font-weight: 900;
-  border-radius: 3vh;
-  background-color: #02ff2c;
+  border-radius: 8vh;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 3vh;
+  font-size: 1.8dvh;
   transition: all 0.5s ease-in-out;
-  font-family: cursive;
 }
 
 .project-5 button:hover {
-  cursor: pointer;
-  box-shadow: 0vh 0.5vh 0.5vh 0vh blue;
+  transition: 0.5s;
+  box-shadow: var(--primary-color) 1px 1px 64px;
+  animation: pulse 1s infinite;
 }
 
 .ai-edu {
@@ -603,21 +629,20 @@ nav {
 }
 
 #contact-me {
-  /* border: red 2px solid; */
+  margin: vh 0 8vh;
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: auto;
   height: fit-content;
-  margin: 20vh 0vh 0vh;
   bottom: 0;
 }
 
 #contact-me h1 {
   color: var(--text-color);
   text-align: center;
-  text-shadow: var(--primary-color) 2px 8px 100px;
+  text-shadow: var(--primary-color) 2px 8px 10px;
   color: var(--text-color);
   font-size: 5dvh;
 }
@@ -628,7 +653,6 @@ nav {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  /* border: #f32170 2px solid; */
   margin: 4vh 0vh 4vh;
 }
 
@@ -679,19 +703,6 @@ nav {
 }
 
 .pic-social-1 {
-  border: red 4px solid;
-  margin: 1.5vh;
-  height: 8.5vh;
-  width: 8.5vh;
-  border-radius: 50%;
-  background-image: url(Images/facebook.png);
-  background-size: cover;
-  cursor: pointer;
-  animation: ani_one 2s linear infinite;
-  transition: all 0.5s ease-in-out;
-}
-
-.pic-social-2 {
   margin: 1.5vh;
   height: 8.5vh;
   width: 8.5vh;
@@ -701,28 +712,31 @@ nav {
   cursor: pointer;
 }
 
-.pic-social-3 {
+.pic-social-2 {
   margin: 1.5vh;
   height: 8.5vh;
   width: 8.5vh;
+  transition: 0.1s;
   border-radius: 20px;
   background-image: url(Images/linkedIn.png);
   background-size: cover;
   cursor: pointer;
 }
 
-.pic-social-4 {
+.pic-social-3 {
   margin: 1.5vh;
   height: 8.5vh;
   width: 8.5vh;
+  transition: 0.1s;
   border-radius: 20px;
   background-image: url(Images/github.jpg);
   background-size: cover;
   cursor: pointer;
 }
 
-.pic-social-5 {
+.pic-social-4 {
   margin: 1.5vh;
+  transition: 0.1s;
   height: 8.5vh;
   width: 8.5vh;
   border-radius: 20px;
@@ -742,7 +756,12 @@ nav {
 .message {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
+  background: linear-gradient(
+    90deg,
+    rgb(255, 141, 190) 0%,
+    rgb(121, 184, 255) 100%
+  );
   text-align: center;
   height: fit-content;
   width: auto;
