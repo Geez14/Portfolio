@@ -143,7 +143,7 @@ nav {
   transition: 0.1s;
 }
 #toggle-icon:hover {
-  animation: vibrate 0.5s infinite;
+  animation: vibrate 0.5s;
 }
 
 @keyframes vibrate {
@@ -345,7 +345,7 @@ nav {
 .about p {
   text-align: justify;
   color: var(--text-color);
-  font-size: 1.5em;
+  font-size: 3dvh;
   margin: 4vh 1vh 4vh;
   line-height: 8vh;
 }
@@ -375,8 +375,10 @@ nav {
 
 .collection_skill li img {
   box-shadow: var(--primary-color) 10px 10px 10px;
-  width: 100px;
-  height: 100px;
+  min-width: 5vh;
+  min-height: 5vh;
+  width: 10vh;
+  height: 10vh;
   margin: 20px;
   padding: 10px;
   border-radius: 10%;
@@ -426,7 +428,7 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2dvh;
   height: fit-content;
   min-height: 70vh;
   max-width: 50vh;
@@ -668,6 +670,7 @@ nav {
 
 .text-info {
   height: fit-content;
+  text-align: center;
   width: auto;
 }
 
@@ -754,9 +757,7 @@ nav {
 }
 
 .message {
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  /* background-color: var(--primary-color); */
+  width: 100%;
   background: linear-gradient(
     90deg,
     rgb(255, 141, 190) 0%,
@@ -764,10 +765,8 @@ nav {
   );
   text-align: center;
   height: fit-content;
-  width: auto;
-  bottom: 0;
 }
 
 .message p {
-  font-size: 1.6em;
+  font-size: 3dvh;
 }
