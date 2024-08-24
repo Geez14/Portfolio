@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog: Git Commands Overview</title>
+  <style>
+    :root {
+      --primary-color: #333;
+      --secondary-color: #f4f4f4;
+      --dark-color: #000;
+      --light-color: #fff;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: var(--light-color);
+      text-align: center;
+      padding: 1rem;
+    }
+
+    main {
+      padding: 1rem;
+    }
+
+    #goback {
+      color: var(--light-color);
+      text-decoration: underline;
+      font-weight: bold;
+      background-color: var(--primary-color);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      margin: 1rem;
+    }
+
+    .card {
+      background-color: var(--secondary-color);
+      box-shadow: var(--primary-color) 0.1rem 0.1rem 0.5rem;
+      margin: 3rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+
+    .card-header {
+      background-color: var(--primary-color);
+      border-radius: 0.5em;
+      color: #fff;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content {
+      margin-left: 1rem;
+    }
+
+    li .command {
+      font-weight: bold;
+    }
+
+    li .description {
+      font-style: italic;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Blog1: Git Commands Overview</h1>
+    <a id="goback" href="../blogHistory.html">Back</a>
+  </header>
+  <!-- Navigation -->
+  <!-- <nav class="nav-bubble">
+    <ul>
+      <li><a href="#Basic_GithubCommands">GotoTop</a></li>
+    </ul>
+  </nav> -->
+
+  <main>
+    <section id="Basic_GithubCommands">
+      <div class="card">
+        <div class="card-header">
+          <h2>Initialization</h2>
+        </div>
+
+        <div class="card-content">
+          <ul>
+            <li>
+              <p class="command">git init</p>
+              <p class="description">Initializes a new Git repository in the current directory.</p>
+            </li>
+            <li>
+              <p class="command">git clone &lt;URL&gt;</p>
+              <p class="description">Clones a repository from a URL.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Staging and Commiting</h2>
+        </div>
+        <div class="card-content">
+          <ul>
+            <li>
+              <p class="command">git add &lt;file&gt;</p>
+              <p class="description">Stages a specific file for commit.</p>
+            </li>
+            <li>
+              <p class="command">git add .</p>
+              <p class="description">Stages all files for commit.</p>
+            </li>
+            <li>
+              <p class="command">git commit -m &lt;message&gt;</p>
+              <p class="description">Commits the staged files with a message.</p>
+            </li>
+            <li>
+              <p class="command">git reset HEAD &lt;file&gt;</p>
+              <p class="description">Unstages a file from the staging area.</p>
+            </li>
+            <li>
+              <p class="command">git reset --hard &lt;commit&gt;</p>
+              <p class="description">Resets the working directory to a specific commit.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Branching and Merging</h2>
+        </div>
+        <div class="card-content">
+          <ul>
+            <li>
+              <p class="command">git branch</p>
+              <p class="description">Lists all the branches in the repository.</p>
+            </li>
+            <li>
+              <p class="command">git branch &lt;branch&gt;</p>
+              <p class="description">Creates a new branch.</p>
+            </li>
+            <li>
+              <p class="command">git checkout &lt;branch&gt;</p>
+              <p class="description">Switches to a different branch.</p>
+            </li>
+            <li>
+              <p class="command">git merge &lt;branch&gt;</p>
+              <p class="description">Merges a branch into the current branch.</p>
+            </li>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Remote Repositories</h2>
+        </div>
+        <div class="card-content">
+          <ul>
+            <li>
+              <p class="command">git remote add &lt;name&gt; &lt;URL&gt;</p>
+              <p class="description">Adds a remote repository.</p>
+            </li>
+            <li>
+              <p class="command">git remote rm &lt;name&gt;</p>
+              <p class="description">Removes a remote repository</p>
+            </li>
+            <li>
+              <p class="command">git fetch &lt;remote&gt;</p>
+              <p class="description">Fetches changes from a remote repository.</p>
+            </li>
+            <li>
+              <p class="command">git pull &lt;remote&gt; &lt;branch&gt;</p>
+              <p class="description">Pulls changes from a remote repository.</p>
+            </li>
+            <li>
+              <p class="command">git push &lt;remote&gt; &lt;branch&gt;</p>
+              <p class="description">Pushes changes to a remote repository.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="Additional_GithubCommands">
+      <div class="card">
+        <div class="card-header">
+          <h2>Status and History</h2>
+        </div>
+        <div class="card-content">
+          <ul>
+            <li>
+              <p class="command">git status</p>
+              <p class="description">Displays the status of the working directory.</p>
+            </li>
+            <li>
+              <p class="command">git log</p>
+              <p class="description">Displays the commit history.</p>
+            </li>
+            <li>
+              <p class="command">git diff</p>
+              <p class="description">Shows changes between commits, commit and working tree, etc.</p>
+            </li>
+            <li>
+              <p class="command">git reflog</p>
+              <p class="description">Shows a reflog of recent actions</p>
+            </li>
+            <li>
+              <p class="command">git blame &lt;file&gt;</p>
+              <p class="description">Shows who changed what and when in a file.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Stashing and Undoing</h2>
+        </div>
+        <div class="card-content">
+          <ul>
+            <li>
+              <p class="command">git stash</p>
+              <p class="description">Stashes changes in the working directory.</p>
+            </li>
+            <li>
+              <p class="command">git stash list</p>
+              <p class="description">Lists all stashes.</p>
+            </li>
+            <li>
+              <p class="command">git stash apply</p>
+              <p class="description">Applies a saved stash.</p>
+            </li>
+            <li>
+              <p class="command">git stash pop</p>
+              <p class="description">Applies the most recent stash and removes it from the stash list.</p>
+            </li>
+            <li>
+              <p class="command">git stash drop</p>
+              <p class="description">Removes a stash from the stash list.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Tagging</h2>
+        </div>
+        <div class="card-content">
+          <ul>
+            <li>
+              <p class="command">git tag</p>
+              <p class="description">Lists all tags.</p>
+            </li>
+            <li>
+              <p class="command">git tag &lt;tag&gt;</p>
+              <p class="description">Creates a new tag.</p>
+            </li>
+            <li>
+              <p class="command">git tag -a &lt;tag&gt; -m &lt;message&gt;</p>
+              <p class="description">Creates an annotated tag.</p>
+            </li>
+            <li>
+              <p class="command">git tag -d &lt;tag&gt;</p>
+              <p class="description">Deletes a tag.</p>
+            </li>
+            <li>
+              <p class="command">git push --tags</p>
+              <p class="description">Pushes tags to a remote repository.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Ignoring Files</h2>
+        </div>
+        <div class="card-content">
+          <ul>
+            <li>
+              <p class="command">git config core.excludes .gitignore</p>
+              <p class="description">Configure a .gitignore file to ignore certain files.</p>
+            </li>
+            <li>
+              <p class="command">git rm --cached &lt;file&gt;</p>
+              <p class="description">Removes a file from the staging area without deleting it.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- about rebasing -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Rebasing</h2>
+        </div>
+        <div class="card-content">
+          <ul>
+            <li>
+              <p class="command">git rebase &lt;branch&gt;</p>
+              <p class="description">Rebases the current branch onto another branch.</p>
+            </li>
+            <li>
+              <p class="command">git rebase -i &lt;commit&gt;</p>
+              <p class="description">Interactive rebase.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- next command is about cherry-picking
+        -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Cherry-picking</h2>
+        </div>
+        <div class="card-content">
+          <ul>
+            <li>
+              <p class="command">git cherry-pick &lt;commit&gt;</p>
+              <p class="description">Picks a specific commit from another branch and applies it to the current branch
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="foot">
+    <p>&copy; 2024 Portfolio</p>
+  </footer>
+  <!-- Scrolling effect script! -->
+  <!-- <script>
+    document.querySelectorAll('.nav-bubble a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script> -->
+</body>
+
+</html>
