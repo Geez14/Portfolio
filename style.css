@@ -596,38 +596,36 @@ nav {
   animation: pulse 1s infinite;
 }
 
-.ai-edu {
-  border: 4px solid #fff;
-  background-image: url(Images/AI-EDU.png);
+.FastNote {
+  background-image: url(Images/FastNote.png);
+  border-radius: 20px;
   background-size: cover;
-  /* background-position: center; */
-  min-height: 15vh;
+  min-height: 20vh;
   min-width: 30.8vh;
   height: auto;
   width: auto;
-  border-radius: 2vh;
 }
 
 .project-6 h5 {
-  color: rgb(255, 255, 2);
-  margin: 2vh;
-  text-decoration: underline;
+  font-size: 2.5dvh;
+  color: var(--text-color);
+  margin: 3vh;
 }
 
 .project-6 button {
   margin: 3vh 0vh 3vh;
-  padding: 1vh;
-  font-size: 0.8em;
-  border-radius: 3vh;
-  background-color: #02ff2c;
+  border-radius: 8vh;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 3vh;
+  font-size: 1.8dvh;
   transition: all 0.5s ease-in-out;
-  font-weight: 900;
-  font-family: cursive;
 }
 
 .project-6 button:hover {
-  cursor: pointer;
-  box-shadow: 0vh 0.5vh 0.5vh 0vh blue;
+  transition: 0.5s;
+  box-shadow: var(--primary-color) 1px 1px 64px;
+  animation: pulse 1s infinite;
 }
 
 #contact-me {
